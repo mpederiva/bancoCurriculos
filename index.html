@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobsNET</title>
+    <link rel="shortcut icon" href="./img/work.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c96140eaa4.js" crossorigin="anonymous"></script>
+    <script src="./autocompletar_CEP.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="logo JobsNet">
+    </div>
+    <ul class="redes">
+      <li>
+        <a href='https://www.facebook.com/gamaacademybr/' target='_blank'>
+          <img src='./img/facebook.png' alt ='logo do facebook'>   
+        </a>
+      </li>
+      <li>
+        <a href='https://twitter.com/gamaacademybr' target='_blank'>
+          <img src='./img/twitter.png' alt ='logo do twitter'>
+        </a>
+      </li>
+      <li>
+        <a href='https://www.instagram.com/gamaacademy/' target='_blank'>
+          <img src='./img/instagram.png' alt ='logo do instagram'>      
+        </a>
+      </li>
+      <li>
+        <a href='https://www.youtube.com/channel/UC8QisS88i22HYQN3jwFiq9Q' target='_blank'>
+          <img src='./img/youtube.png' alt ='logo do youtube'>
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main>
+    <section class="container">
+      <div class="icones">
+        <nav>
+          <a id="pessoal" class="active"><i class="fa fa-user"></i></a>
+          <a id="contato"><i class="fa fa-mobile"></i></a>
+          <a id="documento"><i class="fa fa-address-card-o"></i></a>
+          <a id="profissional"><i class="fa fa-briefcase"></i></a>
+          <a id="moradia"><i class="fa fa-home"></i></a>
+          <a id="botao"><button role="button" class="botao" onclick="displayAbout()" >Enviar Candidatura</button></a>
+        </nav>
+      </div>
+      <div class="cadastro">
+        <div class="pessoal">
+          <h1>Dados Pessoais</h1>
+          <div class="dados">
+            <h2>Nome Completo*</h2>
+            <input type="text" name="nomeCompleto" id="nomeCompleto" size="40" required>
+          </div>
+          <div class="dados">
+            <h2>Data de Nascimento*</h2>
+            <input class="grande" type="date" name="dataNascimento" id="dataNascimento" required>
+          </div>
+          <div class="dados">
+            <h2>Estado Civil</h2>
+            <select class="select" name="estadoCivil" id="estadoCivil">            
+              <option value="titulo">  </option>
+              <option value="solteire"> Solteira(o) </option>
+              <option value="casade"> Casada(o) </option>
+              <option value="separade"> Separada(o) | Divorciada(o) </option>
+              <option value="viuve"> Viúva(o) </option>
+            </select>
+          </div>
+          <div class="dados">
+            <h2>Gênero</h2>
+            <select class="select" name="genero" id="genero">            
+              <option value="titulo">  </option>
+              <option value="mc"> Mulher Cis </option>
+              <option value="mt"> Mulher Trans </option>
+              <option value="hc"> Homem Cis </option>
+              <option value="ht"> Homem Trans </option>
+              <option value="nb"> Não Binárie </option>
+              <option value="ot"> Outro gênero não listado </option>
+            </select>
+          </div>
+        </div>
+        <div class="contato">
+          <h1>Dados para Contato</h1>
+          <div class="dados">
+            <h2>Telefone Fixo 1</h2>
+            <input type="tel" name="celular" id="celular" size="25" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder=" Ex.: 00 00000-0000">
+          </div>
+          <div class="dados">
+            <h2>Telefone Fixo 2</h2>
+            <input type="tel" name="celular" id="celular" size="25" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder=" Ex.: 00 00000-0000">
+          </div>
+          <div class="dados">
+            <h2>Celular*</h2>
+            <input type="tel" name="celular" id="celular" size="25" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder=" Ex.: 00 00000-0000" required>
+          </div>
+          <div class="dados">
+            <h2>Contato</h2>
+            <input type="text" name="contato" id="contato" size="40">
+          </div>
+          <div class="dados">
+            <h2>E-mail*</h2>
+            <input  type="email" name="email" id="email" size="30" placeholder=" Ex.: meunome@email.com" required> 
+          </div>
+        </div>
+        <div class="documento">
+          <h1>Documentos</h1>
+          <div class="dados">
+            <h2>Identidade</h2>
+            <input  type="text" name="identidade" id="identidade" size="25" >          
+          </div>
+          <div class="dados">
+            <h2>CPF*</h2>
+            <input  type="text" name="CPF" id="CPF"  size="25" maxlength="11" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}.[0-9]{2}" required>
+            <button type="button" class="btn btn-info" onclick="validacao()">Validar !</button>
+          </div>
+          <div class="dados">
+            <h2>Possui veículo?</h2>
+            <select class="medio" name="veiculo" id="veiculo">            
+              <option value="titulo">  </option>
+              <option value="veiculoS"> Sim </option>
+              <option value="veiculoN"> Não </option>
+            </select>
+          </div>
+          <div class="dados">
+            <h2>Habilitação</h2>
+            <select class="medio"  name="habilitacao" id="habilitacao">            
+              <option value="titulo">  </option>
+              <option value="habA"> A </option>
+              <option value="habB"> B </option>
+              <option value="habAB"> A e B </option>
+              <option value="habC"> C </option>
+              <option value="habD"> D </option>
+              <option value="habE"> E </option>
+              <option value="habN"> Não possuo </option>
+            </select>
+          </div>
+        </div>
+        <div class="profissional">
+          <h1>Dados Profissionais</h1>
+          <div class="dados">
+            <h2>Profissão*</h2>
+            <input   type="text" name="profissao" id="profissao" size="30" required>           
+          </div>
+          <div class="dados">
+            <h2>Cargo Pretendido</h2>
+            <input   type="text" name="cargo" id="cargo" size="40">           
+          </div>
+          <div class="dados">
+            <h2>Disponibilidade a partir de</h2>
+            <input class="grande" type="date" name="dataNascimento" id="dataNascimento" required>
+          </div>
+        </div>
+        <div class="moradia">
+          <h1>Dados de Moradia</h1>
+          <div class="dados">
+            <h2>Logradouro (Endereço)*</h2>
+            <input name="rua" type="text" id="rua" size="40" required />
+          </div>
+          <div class="dados">
+            <h2>Número*</h2>
+            <input  type="text" name="numero" id="numero" size="5" required />
+          </div>
+          <div class="dados">
+            <h2>Bairro*</h2>
+            <input name="bairro" type="text" id="bairro" size="30" required />
+          </div>
+          <div class="dados">
+            <h2>Cidade*</h2>
+            <input name="cidade" type="text" id="cidade" size="40" required />
+          </div>
+          <div class="dados">
+            <h2>Estado</h2>
+            <input name="uf" type="text" id="uf" size="5"/>
+          </div>
+          <div class="dados">
+            <h2>Cep*</h2>
+            <input  name="cep" type="text" id="cep" value="" size="25" maxlength="8"  pattern="[0-9]{8}"  placeholder=" Ex.: 00000000" onblur="pesquisacep(this.value);"  required/>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="credito">
+      <p> Projeto Final Gama Academy - <a href='https://www.linkedin.com/in/martapederiva/' target='_blank'> Marta Pederiva</a> - 2021</p>
+    </div>
+  </footer>
+</body>
+</html>

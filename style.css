@@ -1,0 +1,234 @@
+/*Geral*/
+body {
+  font-family: "proxima-nova","Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #e8eaec;
+  background-image: linear-gradient(to right, #d1d5d9, #1c3144);
+}
+
+/* Header */
+header {
+  display: inline-flex;
+  width: 90%;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 25px;
+}
+
+.logo {
+  float: left;
+  margin: 12px auto 3px 12px;
+}
+
+header ul {
+  display: flex;
+  text-decoration: none;
+  align-items: left;
+  color: #e8eaec;
+}
+
+.redes img{
+  width: 20px;
+  margin: 0.5%;
+}
+
+.redes li{
+  padding: 5px;
+  list-style: none;
+}
+
+/* Main */
+.container {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  max-width: 1100px;
+}
+
+.icones {
+  float: left;
+  position: fixed;
+  width: 9%;
+  height: 110%;
+}
+
+.icones nav a {
+  list-style: none;
+  padding: 35px;
+  color: #1c3144;
+  font-size: 1.1em;
+  display: block;
+  transition: all .3s ease-in-out;
+}
+
+.icones nav a:hover {
+  color: #e8eaec;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.icones nav a:first-child {
+  margin-top: 7px;
+}
+
+.ativo {
+  color: #ffffff;
+}
+
+#botao {
+  width: 60px;
+  border: none;
+  transition: all 300ms ease-out;
+  margin-left: -15px;
+}
+
+#botao:hover {
+  cursor: pointer;
+  transition: ease-in;
+  border-color: #e8eaec;
+}
+
+.cadastro {
+  float: right;
+  width: 90%;
+  height: 100%;
+}
+
+@keyframes{
+  to {
+      visibility: hidden;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+
+#animation {
+  transition: 300ms;
+}
+
+.dados, .pessoal, .documento, .contato, .profissional, .moradia {
+  transition: opacity .5s ease-in;
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  width: 95%;
+  border-width: 0px 1px 1px;
+  border-style: solid solid solid;
+  border-top: 0px;
+  padding: 3px 0px 3px 2px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  display: block;
+  text-align: center;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: #e8eaec;
+}
+
+h2 {
+  font-family: "Roboto";
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 1px;
+  display: block;
+  font-size: 0.7em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+input, select {
+  margin-bottom: 15px;
+  border: 0.5px ridge rgb(177, 177, 177);
+  border-radius: 7%;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 5px 25px;
+}
+
+.credito {
+  height: 40px;
+  right: -20px;
+  bottom: 0;
+  margin: auto -70px 22em auto;
+  position: absolute;
+  z-index: 1;
+  font-size: 1em;
+  transform: rotate(-90deg);
+  transition: all .5s ease-in-out;
+  text-transform: uppercase;
+  align-items: right;
+}
+
+.credito p {
+  text-align: left;
+  border-width: 1px;
+  border-style: solid;
+  border-top: 0;
+  font-size: .8em;
+  padding: 7px 0;
+}
+
+.credito p a {
+  text-decoration: none;
+  color: #8d98a1;
+}
+
+.credito p a:hover {
+  color: #e8eaec;
+  transition: 300ms;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 940px) {
+  .form {   
+      width: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .container .name h1 {
+      font-size: 30px;
+  }
+  
+  .container .name h2 {
+      font-size: 15px;
+  }
+
+  #about p {
+      max-width: 80%;
+      text-align: justify;
+  }
+ 
+}
